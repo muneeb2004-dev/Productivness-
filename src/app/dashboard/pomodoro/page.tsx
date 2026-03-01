@@ -259,7 +259,7 @@ export default function PomodoroPage() {
 
           {/* Timer Display */}
           <div className="text-center mb-4">
-            <div className="position-relative d-inline-block" style={{ width: 260, height: 260 }}>
+            <div className="position-relative d-inline-block pomodoro-ring" style={{ width: 260, height: 260 }}>
               {/* SVG circular progress */}
               <svg width="260" height="260" viewBox="0 0 260 260" className="position-absolute top-0 start-0">
                 <circle cx="130" cy="130" r="115" fill="none" stroke="currentColor" strokeWidth="6" opacity={0.1} />

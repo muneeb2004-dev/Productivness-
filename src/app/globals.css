@@ -99,7 +99,8 @@ body {
 
 /* ─── Sidebar ─────────────────────────────────────────────────────────────── */
 .sidebar {
-  width: 280px;
+  width: 260px;
+  min-width: 260px;
   min-height: 100vh;
   transition: transform 0.3s ease;
 }
@@ -474,7 +475,64 @@ body {
 
 /* ─── Offcanvas Sidebar Enhancements ──────────────────────────────────────── */
 .offcanvas-start {
-  width: 280px !important;
+  width: 260px !important;
+}
+
+/* ── Mobile Dashboard Layout ──────────────────────────────────────────── */
+.dashboard-main-content {
+  padding-top: 72px; /* 56px topbar + 16px gap */
+}
+@media (min-width: 768px) {
+  .dashboard-main-content {
+    padding-top: 1.5rem; /* No topbar on desktop */
+  }
+}
+
+/* ── Mobile Responsive Helpers ─────────────────────────────────────────── */
+@media (max-width: 767.98px) {
+  /* Smaller headings on mobile */
+  .fs-4 { font-size: 1.15rem !important; }
+  
+  /* Make cards more compact on mobile */
+  .card-custom .card-body { padding: 0.85rem !important; }
+  
+  /* Icon box smaller on mobile */
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+  
+  /* Better button sizing on mobile */
+  .btn-accent, .btn-accent-outline { font-size: 0.88rem; padding: 0.45rem 1rem; }
+  
+  /* Make stat cards text smaller */
+  .card-custom .fs-5 { font-size: 1rem !important; }
+  
+  /* Page header flex wrap */
+  .d-flex.justify-content-between { gap: 0.5rem; }
+
+  /* Scale the pomodoro timer on small screens */
+  .pomodoro-ring { width: 220px !important; height: 220px !important; }
+  .pomodoro-ring svg { width: 220px !important; height: 220px !important; }
+
+  /* Finance transaction row: hide action buttons text, show only icons */
+  .list-group-item .d-flex.gap-1 button { width: 26px !important; height: 26px !important; }
+
+  /* Smaller display text for timer */
+  .display-3 { font-size: 2.5rem !important; }
+
+  /* Tables responsive */
+  .table-responsive { -webkit-overflow-scrolling: touch; }
+
+  /* Landing page: smaller hero text */
+  .display-2 { font-size: 2.2rem !important; }
+  .display-5 { font-size: 1.5rem !important; }
+  .lead { font-size: 0.95rem !important; }
+  
+  /* Prevent horizontal overflow */
+  body { overflow-x: hidden; }
 }
 
 /* ─── Badge Styles ────────────────────────────────────────────────────────── */

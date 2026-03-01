@@ -42,8 +42,8 @@ export default function DashboardLayout({
     <div className="d-flex min-vh-100">
       <Sidebar />
       <main className="flex-grow-1 min-vh-100 overflow-auto">
-        {/* pt: 56px mobile topbar + 16px gap on small screens */}
-        <div className="container-fluid p-3 p-md-4 pt-md-4" style={{ maxWidth: 1200, paddingTop: "calc(56px + 1rem)" }}>
+        {/* Mobile: 56px topbar + 12px gap. Desktop: normal padding */}
+        <div className="container-fluid px-3 px-md-4 pb-4 dashboard-main-content" style={{ maxWidth: 1200 }}>
           {children}
         </div>
       </main>
