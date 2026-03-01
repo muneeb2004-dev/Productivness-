@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import Sidebar from "@/components/Sidebar";
+import AuroraBg from "@/components/AuroraBg";
 
 export default function DashboardLayout({
   children,
@@ -40,6 +41,7 @@ export default function DashboardLayout({
 
   return (
     <div className="d-flex min-vh-100">
+      <AuroraBg />
       <Sidebar />
       <main className="flex-grow-1 min-vh-100 overflow-auto">
         {/* Mobile: 56px topbar + 12px gap. Desktop: normal padding */}

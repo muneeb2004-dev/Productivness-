@@ -46,12 +46,14 @@ export default function Sidebar() {
     <div className="d-flex flex-column h-100">
       {/* Brand */}
       <div className="px-3 pt-4 pb-3">
-        <h1 className="gradient-text fw-bold fs-5 mb-0">
-          <i className="bi bi-lightning-charge-fill me-2"></i>productivness
-        </h1>
-        <small className="text-body-secondary text-uppercase" style={{ fontSize: "0.65rem", letterSpacing: "0.1em" }}>
-          Your Productivity Hub
-        </small>
+        <button onClick={() => handleNavClick("/dashboard")} className="brand-link border-0 bg-transparent p-0 text-start w-100">
+          <h1 className="gradient-text fw-bold fs-5 mb-0">
+            <i className="bi bi-lightning-charge-fill me-2"></i>productivness
+          </h1>
+          <small className="text-body-secondary text-uppercase" style={{ fontSize: "0.65rem", letterSpacing: "0.1em" }}>
+            Your Productivity Hub
+          </small>
+        </button>
       </div>
 
       <hr className="mx-3 my-1" />
@@ -111,7 +113,7 @@ export default function Sidebar() {
     <>
       {/* ─── Mobile Top Bar ───────────────────────────────────── */}
       <div
-        className="d-md-none position-fixed top-0 start-0 w-100 d-flex align-items-center px-3 bg-body-tertiary border-bottom"
+        className="d-md-none position-fixed top-0 start-0 w-100 d-flex align-items-center px-3 mobile-topbar"
         style={{ zIndex: 1060, height: 56 }}
       >
         <button
@@ -124,13 +126,15 @@ export default function Sidebar() {
         >
           <i className="bi bi-list fs-5"></i>
         </button>
-        <span className="gradient-text fw-bold ms-3 fs-6">
-          <i className="bi bi-lightning-charge-fill me-1"></i>productivness
-        </span>
+        <button onClick={() => handleNavClick("/dashboard")} className="brand-link border-0 bg-transparent p-0 ms-3">
+          <span className="gradient-text fw-bold fs-6">
+            <i className="bi bi-lightning-charge-fill me-1"></i>productivness
+          </span>
+        </button>
       </div>
 
       {/* ─── Desktop Sidebar ────────────────────────────────────── */}
-      <aside className="sidebar d-none d-md-flex flex-column bg-body-tertiary border-end sticky-top" style={{ height: "100vh" }}>
+      <aside className="sidebar d-none d-md-flex flex-column border-end sticky-top" style={{ height: "100vh" }}>
         {sidebarContent}
       </aside>
 

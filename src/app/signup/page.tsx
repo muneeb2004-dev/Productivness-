@@ -10,6 +10,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { useAuth } from "@/hooks/useAuth";
 import ThemeToggle from "@/components/ThemeToggle";
+import AuroraBg from "@/components/AuroraBg";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
@@ -38,17 +39,14 @@ export default function SignupPage() {
 
   return (
     <div className="min-vh-100 d-flex align-items-center justify-content-center position-relative" style={{ background: "var(--bs-body-bg)" }}>
+      <AuroraBg />
       {/* Theme toggle */}
-      <div className="position-absolute top-0 end-0 p-4">
+      <div className="position-absolute top-0 end-0 p-4" style={{ zIndex: 2 }}>
         <ThemeToggle />
       </div>
 
-      {/* Decorative gradient blobs */}
-      <div className="position-absolute" style={{ top: "15%", right: "8%", width: 280, height: 280, background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.06), transparent 70%)", borderRadius: "50%" }}></div>
-      <div className="position-absolute" style={{ bottom: "8%", left: "5%", width: 220, height: 220, background: "radial-gradient(circle, rgba(167, 139, 250, 0.05), transparent 70%)", borderRadius: "50%" }}></div>
-
-      <div className="container" style={{ maxWidth: 460, zIndex: 1 }}>
-        <div className="card card-custom shadow-lg p-4 p-md-5">
+      <div className="container reveal-up" style={{ maxWidth: 460, zIndex: 1 }}>
+        <div className="card card-custom shadow-lg p-4 p-md-5" style={{ backdropFilter: "blur(12px) saturate(150%)", WebkitBackdropFilter: "blur(12px) saturate(150%)" }}>
           <div className="card-body">
             {/* Header */}
             <div className="text-center mb-4">
